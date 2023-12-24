@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
+  :root {
+    --bg-color: #EDEDED;
+    --main-color: #007dfc;
+    --2nd--main-color: #ffffff;
+    --text-color: #ffffff;
+    --big-font: 5rem;
+    --h2-font: 1.9rem;
+    --p-font: 1rem;
+  }
+  body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: var(--text-color);
+  }
+  
+  .table th,
+  .table td {
+      color: #ffffff;
+  }
+  .lead{
+    color: #FFFFFF;
+  }
+    
+section{
+    padding: 120px 14%;
+}
+
+
+header{
+  display: flex;
+  top:0;
+  left:0;
+  width:100%;
+  align-items: center;
+  padding: 30px 10%;
+  position:fixed;
+  background:none;
+  z-index:10000; 
+       
+   }
+
+.logo{
+  color:var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-right:30px;
+  
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    align-items: center;
+}
+.home-img img{
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    
+}
+.home-text h5{
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+.home-text h1{
+    color: var(--text-color);
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.home-text h6{
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+.home-text p{
+    max-width:470px;
+    font-size: var(--p-font);
+    font-weight: 300;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+
+    color: var(--2nd--main-color);}
+    
+   
+
+.home-text .count a{
+    color:var(--2nd--main-color);
+    margin-right: 20px;
+    word-spacing: 5px;
+ }
+ .community{
+  margin: 80px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 5rem;
+  align-items:center ;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+}
+.community-img img{
+  max-width: 100%;
+  width: 450px;
+  height: auto;
+}
+.community-text h3{
+  color: var(--text-color);
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin: 0 0 30px;
+}
+.community-text h2{
+margin-bottom: 0.5rem;
+font-weight: 500;
+font-size: var(--h2-font);
+line-height: 1.2;
+max-width: 470px;
+margin-bottom: 2rem;
+
+}
+.community-text p{
+  max-width: 570px;
+  font-size: var(--p-font);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  line-height: 1.8rem;
+  color: var(--2nd--mai-colormain-color);
+  text-align: justify;
+}
+.count span{
+    color: var(--main-color);
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgb(254, 254, 254);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+.analyze-button {
+  /* Add your desired styles for the "Analyze" button */
+background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); /* Green background color */
+  /* White text color */
+  padding: 10px 20px; /* Padding around the text */
+  font-size: 16px; /* Font size */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+}
+
+
+
+.btn{
+        background: #ffffff;
+        color: #000000;
+        box-shadow: 4px 4px var(--text-color);
+        padding: 0 25px;
+        line-height: 42px;
+        display: inline-block;
+        border: 1px solid transparent;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        transition: ease all 0.35s;
+    }
+
+
+.btn:hover{
+    background: var(--text-color);
+    color: #ffffff;
+    box-shadow: 4px 4px var(--main-color);
+}
+
+.about{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 5rem;
+  align-items:center ;
+}
+.about-img img{
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+}
+
+.about-text h3{
+  color: #FFFFFF;
+margin-bottom: 0.5rem;
+font-weight: 500;
+font-size: var(--h2-font);
+line-height: 1.2;
+max-width: 470px;
+margin-bottom: 2rem;
+
+}
+.about-text p{
+  max-width: 570px;
+  font-size: var(--p-font);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  line-height: 1.8rem;
+  color: #FFFFFF;
+  text-align: justify;
+}

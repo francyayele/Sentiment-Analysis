@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+          
+<header>
+    <a href="#" class="logo">VADER</a>
+
+</header>
+
+    
+   
+  
+<section class="home" id="home">
+        <div class="home-text">
+            <h5>Hello, Users</h5>
+            <h1>Sentiment <span>Explorer</span> </h1>
+            
+            <p>Welcome to Sentiment Explorer, your go-to platform for advanced sentiment analysis.
+                We used VADER tool for our project.
+                Our cutting-edge model leverages the power of natural language processing and machine learning.
+                Trained on diverse datasets,
+                ensuring precise sentiment insights for your text inputs.</p>
+           
+                <a href="" class="btn">More</a>
+        
+    
+            </div>
+         
+        </div>
+        <div class="home-img">
+            <img src="static\images\Img 1.svg">
+        </div>
+        
+
+    </section>
+
+        <section class="about" id="about">
+            <div class="container mt-10">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form method="POST" class="mb-4">
+                            <textarea name="text1" class="form-control" placeholder="Share your thoughts..." rows="5"></textarea>
+                            <button type="submit" class="btn btn-success btn-custom mt-3">Analyze</button>
+
+
+
+                        </form>
+                    </div>
+          
+          
+                      {% if final %}
+                      <!-- Result Section -->
+                      <div class="col-md-6">
+                          <div class="text-center">
+                              
+                              <p class="lead">{{ final * 100 }}% positive!</p>
+          
+                              <div class="table-responsive">
+                                  <table class="table table-bordered text-white">
+                                      <thead>
+                                          <tr>
+                                              <th>Sentiment Category</th>
+                                              <th>Score</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>Positive</td>
+                                              <td>{{ text2 }}</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Neutral</td>
+                                              <td>{{ text3 }}</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Negative</td>
+                                              <td>{{ text5 }}</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Compound</td>
+                                              <td>{{ text4 }}</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- End Result Section -->
+                      {% else %}
+                          <!-- Placeholder for No Result -->
+                      {% endif %}
+                  </div>
+              </div>
+        
+         <div class="about-text">
+             <h3>VADER</h3>
+             <p>VADER stands for Valence Aware Dictionary and sEntiment Reasoner.
+                 It is a lexicon and rule-based sentiment analysis tool designed 
+                 to analyze sentiments expressed in text, particularly in the context
+                  of social media. VADER is specifically tuned to work well with short
+                   and informal texts commonly found in platforms like Twitter, Facebook,
+                    and other social media channels.</p> 
+            
+        
+     
+         </div>
+         
+      </section>
+
+   
+</body>
+</html>
